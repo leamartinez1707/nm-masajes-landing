@@ -49,11 +49,13 @@ Mensaje: ${formData.mensaje}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <img
-                src="/nm_log.png"
-                alt="NM Masajes Logo"
-                className="h-10 w-auto mr-3"
-              />
+              <a href="#inicio">
+                <img
+                  src="/nm_log.png"
+                  alt="NM Masajes Logo"
+                  className="h-10 w-auto mr-3"
+                />
+              </a>
               <div>
                 <h1 className="text-2xl font-bold text-gray-800">NM Masajes</h1>
                 <span className="text-sm text-gray-600">Bienestar y Relajación</span>
@@ -104,8 +106,8 @@ Mensaje: ${formData.mensaje}
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-            Tu bienestar,
-            <span className="text-purple-300 block">Mi pasión</span>
+            Tu Bienestar,
+            <span className="text-purple-300 block">Mi Pasión</span>
           </h1>
           <p className="text-xl lg:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
             Experimenta el equilibrio perfecto entre cuerpo y mente con tratamientos personalizados.
@@ -147,13 +149,24 @@ Mensaje: ${formData.mensaje}
                 alt="Masaje relajante"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              {/* Desktop overlay - solo visible en hover */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-2xl font-bold mb-2">Masaje Relajante</h3>
                 <p className="text-sm mb-4 leading-relaxed">
                   Ideal para liberar el estrés diario. Técnicas suaves que calman tu mente y relajan profundamente los músculos tensos.
                 </p>
                 <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors">
+                  MÁS INFO
+                </button>
+              </div>
+              {/* Mobile info - siempre visible */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Masaje Relajante</h3>
+                <p className="text-sm mb-3 leading-relaxed">
+                  Ideal para liberar el estrés diario. Técnicas suaves que calman tu mente y relajan profundamente los músculos tensos.
+                </p>
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-sm text-xs font-medium transition-colors">
                   MÁS INFO
                 </button>
               </div>
@@ -169,13 +182,24 @@ Mensaje: ${formData.mensaje}
                 alt="Drenaje linfático"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              {/* Desktop overlay */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-2xl font-bold mb-2">Drenaje Linfático</h3>
                 <p className="text-sm mb-4 leading-relaxed">
                   Técnica especializada que te ayuda a eliminar toxinas y reducir la retención de líquidos. Mejora tu circulación linfática.
                 </p>
                 <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors">
+                  MÁS INFO
+                </button>
+              </div>
+              {/* Mobile info */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Drenaje Linfático</h3>
+                <p className="text-sm mb-3 leading-relaxed">
+                  Técnica especializada que te ayuda a eliminar toxinas y reducir la retención de líquidos. Mejora tu circulación linfática.
+                </p>
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-sm text-xs font-medium transition-colors">
                   MÁS INFO
                 </button>
               </div>
@@ -191,13 +215,24 @@ Mensaje: ${formData.mensaje}
                 alt="Masaje modelador"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              {/* Desktop overlay */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-2xl font-bold mb-2">Masaje Modelador</h3>
                 <p className="text-sm mb-4 leading-relaxed">
                   Tratamiento estético que te ayuda a modelar tu figura, reducir medidas y mejorar la apariencia de tu piel.
                 </p>
                 <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors">
+                  MÁS INFO
+                </button>
+              </div>
+              {/* Mobile info */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Masaje Modelador</h3>
+                <p className="text-sm mb-3 leading-relaxed">
+                  Tratamiento estético que te ayuda a modelar tu figura, reducir medidas y mejorar la apariencia de tu piel.
+                </p>
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-sm text-xs font-medium transition-colors">
                   MÁS INFO
                 </button>
               </div>
@@ -213,13 +248,24 @@ Mensaje: ${formData.mensaje}
                 alt="Masaje con piedras calientes"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              {/* Desktop overlay */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-2xl font-bold mb-2">Piedras Calientes</h3>
                 <p className="text-sm mb-4 leading-relaxed">
                   El calor de las piedras volcánicas penetra profundamente, relajando músculos y mejorando la circulación sanguínea.
                 </p>
                 <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors">
+                  MÁS INFO
+                </button>
+              </div>
+              {/* Mobile info */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Piedras Calientes</h3>
+                <p className="text-sm mb-3 leading-relaxed">
+                  El calor de las piedras volcánicas penetra profundamente, relajando músculos y mejorando la circulación sanguínea.
+                </p>
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-sm text-xs font-medium transition-colors">
                   MÁS INFO
                 </button>
               </div>
@@ -235,13 +281,24 @@ Mensaje: ${formData.mensaje}
                 alt="Masaje descontracturante"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              {/* Desktop overlay */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-2xl font-bold mb-2">Masaje Descontracturante</h3>
                 <p className="text-sm mb-4 leading-relaxed">
                   Tratamiento específico para dolores musculares y contracturas. Técnicas avanzadas para problemas posturales.
                 </p>
                 <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors">
+                  MÁS INFO
+                </button>
+              </div>
+              {/* Mobile info */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Masaje Descontracturante</h3>
+                <p className="text-sm mb-3 leading-relaxed">
+                  Tratamiento específico para dolores musculares y contracturas. Técnicas avanzadas para problemas posturales.
+                </p>
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-sm text-xs font-medium transition-colors">
                   MÁS INFO
                 </button>
               </div>
@@ -257,13 +314,24 @@ Mensaje: ${formData.mensaje}
                 alt="Aplicación de vendas neuromusculares"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              {/* Desktop overlay */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-2xl font-bold mb-2">Vendas Neuromusculares</h3>
                 <p className="text-sm mb-4 leading-relaxed">
                   Aplicación de vendas especializadas que ayudan en la recuperación muscular y mejoran el rendimiento físico.
                 </p>
                 <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors">
+                  MÁS INFO
+                </button>
+              </div>
+              {/* Mobile info */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Vendas Neuromusculares</h3>
+                <p className="text-sm mb-3 leading-relaxed">
+                  Aplicación de vendas especializadas que ayudan en la recuperación muscular y mejoran el rendimiento físico.
+                </p>
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-sm text-xs font-medium transition-colors">
                   MÁS INFO
                 </button>
               </div>
@@ -306,14 +374,16 @@ Mensaje: ${formData.mensaje}
                 </div>
                 <div className="flex items-center p-4 bg-white rounded-sm shadow-sm">
                   <Mail className="w-5 h-5 text-purple-600 mr-3" />
-                  <span className="text-gray-700">info@nmmasajes.com</span>
+                  <span className="text-gray-700">nataliasantos@hotmail.com</span>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/3757957/pexels-photo-3757957.jpeg"
-                alt="Spa ambiente"
+              <video
+                src="/videos/spa_room.mp4"
+                autoPlay
+                loop
+                muted
                 className="rounded-sm shadow-2xl w-full h-[500px] object-cover"
               />
             </div>
@@ -336,7 +406,7 @@ Mensaje: ${formData.mensaje}
             <div className="bg-gray-50 rounded-sm p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-purple-300 transform hover:-translate-y-2">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Sesión Individual</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-purple-600">$2,200</span>
+                <span className="text-4xl font-bold text-purple-600">$1,300</span>
                 <span className="text-gray-600 ml-2">UYU</span>
               </div>
               <ul className="text-gray-700 space-y-3 mb-8">
@@ -359,42 +429,49 @@ Mensaje: ${formData.mensaje}
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-purple-600 text-white px-4 py-2 rounded-sm text-sm font-medium shadow-lg">Más Popular</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Paquete 3 Sesiones</h3>
-              <div className="mb-2">
-                <span className="text-lg text-gray-500 line-through">$6,600</span>
+              <div className='flex flex-col justify-between'>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Paquete 3 Sesiones</h3>
+                  <div className="mb-2">
+                    <span className="text-lg text-gray-500 line-through">$3,900</span>
+                  </div>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-purple-600">$3,500</span>
+                    <span className="text-gray-600 ml-2">UYU</span>
+                  </div>
+                  <ul className="text-gray-700 space-y-3 mb-8">
+                    <li>• 3 sesiones de 60 minutos</li>
+                    <li>• Ahorro de $400</li>
+                    <li>• Válido por 3 meses</li>
+                    <li>• Tratamiento personalizado</li>
+                  </ul>
+                </div>
+                <button
+                  onClick={() => handleWhatsAppContact('¡Hola! Me interesa el paquete de 3 sesiones con descuento. ¿Podrían darme más detalles sobre cómo adquirirlo?')}
+                  className="block w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 px-6 rounded-sm hover:from-purple-700 hover:to-purple-800 transition-all font-medium shadow-lg flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Consultar por WhatsApp
+                </button>
               </div>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-purple-600">$5,500</span>
-                <span className="text-gray-600 ml-2">UYU</span>
-              </div>
-              <ul className="text-gray-700 space-y-3 mb-8">
-                <li>• 3 sesiones de 60 minutos</li>
-                <li>• Ahorro de $1,100</li>
-                <li>• Válido por 3 meses</li>
-                <li>• Tratamiento personalizado</li>
-              </ul>
-              <button
-                onClick={() => handleWhatsAppContact('¡Hola! Me interesa el paquete de 3 sesiones con descuento. ¿Podrían darme más detalles sobre cómo adquirirlo?')}
-                className="block w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 px-6 rounded-sm hover:from-purple-700 hover:to-purple-800 transition-all font-medium shadow-lg flex items-center justify-center gap-2"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Consultar por WhatsApp
-              </button>
             </div>
 
             {/* Membresía Mensual */}
-            <div className="bg-gray-50 rounded-sm p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-purple-300 transform hover:-translate-y-2">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Plan Mensual</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-purple-600">$7,500</span>
-                <span className="text-gray-600 ml-2">UYU/mes</span>
-              </div>
-              <ul className="text-gray-700 space-y-3 mb-8">
-                <li>• 4 sesiones mensuales</li>
-                <li>• 25% descuento adicional</li>
-                <li>• Prioridad en reservas</li>
-                <li>• Consultas incluidas</li>
-              </ul>
+            <div className="bg-gray-50 rounded-sm p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-purple-300 transform hover:-translate-y-2 flex flex-col justify-between">
+
+              <>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Plan Mensual</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-purple-600">$4,150</span>
+                  <span className="text-gray-600 ml-2">UYU/mes</span>
+                </div>
+                <ul className="text-gray-700 space-y-3 mb-8">
+                  <li>• 4 sesiones mensuales</li>
+                  <li>• 20% descuento adicional</li>
+                  <li>• Prioridad en reservas</li>
+                  <li>• Consultas incluidas</li>
+                </ul>
+              </>
               <button
                 onClick={() => handleWhatsAppContact('Hola! Me interesa el plan mensual de 4 sesiones. ¿Podrían explicarme cómo funciona la suscripción?')}
                 className="block w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 px-6 rounded-sm hover:from-purple-700 hover:to-purple-800 transition-all font-medium shadow-lg flex items-center justify-center gap-2"
@@ -411,8 +488,8 @@ Mensaje: ${formData.mensaje}
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white/10 rounded-sm p-6 backdrop-blur-sm">
                 <h4 className="text-xl font-semibold mb-3">Primera Visita</h4>
-                <p className="text-purple-100 mb-2">40% de descuento en tu primera sesión</p>
-                <p className="text-2xl font-bold">Solo $1,320 UYU</p>
+                <p className="text-purple-100 mb-2">20% de descuento en tu primera sesión</p>
+                <p className="text-2xl font-bold">Solo $1,000 UYU</p>
               </div>
               <div className="bg-white/10 rounded-sm p-6 backdrop-blur-sm">
                 <h4 className="text-xl font-semibold mb-3">Referidos</h4>
