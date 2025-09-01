@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react"
+import { MapPinIcon, MessageCircle } from "lucide-react"
 import { handleWhatsAppContact } from "../utils"
 
 const Hero = () => {
@@ -33,6 +33,7 @@ const Hero = () => {
                         Ver Servicios
                     </a>
                 </div>
+                <span className="flex items-center justify-center mx-auto gap-2 text-lg mt-8 leading-relaxed font-thin"><MapPinIcon /> Montevideo, La Teja.</span>
             </div>
         </section>
     )

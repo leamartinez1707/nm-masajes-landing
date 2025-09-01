@@ -32,7 +32,7 @@ const About = () => {
                             </div>
                             <div className="flex items-center p-4 bg-white rounded-sm shadow-sm">
                                 <Mail className="w-5 h-5 text-purple-600 mr-3" />
-                                <span className="text-gray-700">nataliasantos@hotmail.com</span>
+                                <span className="text-gray-700">natimarti357@gmail.com</span>
                             </div>
                         </div>
                     </div>
