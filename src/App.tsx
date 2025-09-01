@@ -57,7 +57,7 @@ Mensaje: ${formData.mensaje}
       />
 
       {/* Testimonials Section */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* WhatsApp Floating Button */}
       <WhatsappButton />
