@@ -401,26 +401,51 @@ Mensaje: ${formData.mensaje}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Precio Individual */}
             <div className="bg-gray-50 rounded-sm p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-purple-300 transform hover:-translate-y-2">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Sesión Individual</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Masajes Básicos</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-purple-600">$1,300</span>
+                <span className="text-4xl font-bold text-purple-600">$990</span>
                 <span className="text-gray-600 ml-2">UYU</span>
               </div>
               <ul className="text-gray-700 space-y-3 mb-8">
                 <li>• 60 minutos de tratamiento</li>
-                <li>• Consulta personalizada</li>
-                <li>• Productos premium incluidos</li>
-                <li>• Ambiente profesional</li>
+                <li>• Masaje Relajante</li>
+                <li>• Masaje Descontracturante</li>
+                <li>• Drenaje Linfático</li>
               </ul>
               <button
-                onClick={() => handleWhatsAppContact('Hola! Me interesa una sesión individual de masajes. ¿Podrían darme más información sobre disponibilidad y reservas?')}
-                className="block w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 px-6 rounded-sm hover:from-purple-700 hover:to-purple-800 transition-all font-medium shadow-lg flex items-center justify-center gap-2"
+                onClick={() => handleWhatsAppContact('Hola! Me interesa un masaje (relajante, descontracturante o drenaje linfático) por $990. ¿Podrían darme más información sobre disponibilidad y reservas?')}
+                className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 px-6 rounded-sm hover:from-purple-700 hover:to-purple-800 transition-all font-medium shadow-lg flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
                 Reservar por WhatsApp
+              </button>
+            </div>
+
+            {/* Masajes Reductores */}
+            <div className="bg-orange-50 rounded-sm p-8 text-center hover:shadow-xl transition-all duration-300 border-2 border-orange-400 relative transform hover:-translate-y-2">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-orange-600 text-white px-4 py-2 rounded-sm text-sm font-medium shadow-lg">Especializado</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Masajes Reductores</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-orange-600">$1,200</span>
+                <span className="text-gray-600 ml-2">UYU</span>
+              </div>
+              <ul className="text-gray-700 space-y-3 mb-8">
+                <li>• 60 minutos de tratamiento</li>
+                <li>• Productos especializados</li>
+                <li>• Técnicas reductoras</li>
+                <li>• Resultados visibles</li>
+              </ul>
+              <button
+                onClick={() => handleWhatsAppContact('Hola! Me interesa un masaje reductor por $1,200. ¿Podrían darme más información sobre este tratamiento especializado?')}
+                className="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-6 rounded-sm hover:from-orange-700 hover:to-orange-800 transition-all font-medium shadow-lg flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Consultar por WhatsApp
               </button>
             </div>
 
@@ -433,17 +458,17 @@ Mensaje: ${formData.mensaje}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Paquete 3 Sesiones</h3>
                   <div className="mb-2">
-                    <span className="text-lg text-gray-500 line-through">$3,900</span>
+                    <span className="text-lg text-gray-500 line-through">$2,970</span>
                   </div>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-purple-600">$3,500</span>
+                    <span className="text-4xl font-bold text-purple-600">$2,700</span>
                     <span className="text-gray-600 ml-2">UYU</span>
                   </div>
                   <ul className="text-gray-700 space-y-3 mb-8">
                     <li>• 3 sesiones de 60 minutos</li>
-                    <li>• Ahorro de $400</li>
+                    <li>• Ahorro de $270</li>
                     <li>• Válido por 3 meses</li>
-                    <li>• Tratamiento personalizado</li>
+                    <li>• Combiná diferentes masajes</li>
                   </ul>
                 </div>
                 <button
@@ -462,12 +487,12 @@ Mensaje: ${formData.mensaje}
               <>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Plan Mensual</h3>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-purple-600">$4,150</span>
+                  <span className="text-4xl font-bold text-purple-600">$3,500</span>
                   <span className="text-gray-600 ml-2">UYU/mes</span>
                 </div>
                 <ul className="text-gray-700 space-y-3 mb-8">
                   <li>• 4 sesiones mensuales</li>
-                  <li>• 20% descuento adicional</li>
+                  <li>• 12% descuento adicional</li>
                   <li>• Prioridad en reservas</li>
                   <li>• Consultas incluidas</li>
                 </ul>
@@ -486,15 +511,15 @@ Mensaje: ${formData.mensaje}
           <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-sm p-8 text-white text-center shadow-2xl">
             <h3 className="text-3xl font-bold mb-4">Promociones Especiales</h3>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white/10 rounded-sm p-6 backdrop-blur-sm">
-                <h4 className="text-xl font-semibold mb-3">Primera Visita</h4>
-                <p className="text-purple-100 mb-2">20% de descuento en tu primera sesión</p>
-                <p className="text-2xl font-bold">Solo $1,000 UYU</p>
+              <div className="bg-white rounded-sm p-6 backdrop-blur-sm">
+                <h4 className="text-xl text-purple-800 font-semibold mb-3">Primera Visita</h4>
+                <p className="text-purple-600 mb-2">20% de descuento en tu primera sesión</p>
+                <p className="text-2xl text-purple-800 font-bold">Solo $792 UYU</p>
               </div>
-              <div className="bg-white/10 rounded-sm p-6 backdrop-blur-sm">
-                <h4 className="text-xl font-semibold mb-3">Referidos</h4>
-                <p className="text-purple-100 mb-2">Trae un amigo y ambos obtienen 20% off</p>
-                <p className="text-2xl font-bold">¡Bienestar compartido!</p>
+              <div className="bg-white rounded-sm p-6 backdrop-blur-sm">
+                <h4 className="text-xl text-purple-800 font-semibold mb-3">Referidos</h4>
+                <p className="text-purple-600 mb-2">Trae un amigo y ambos obtienen 20% off</p>
+                <p className="text-2xl text-purple-800 font-bold">¡Bienestar compartido!</p>
               </div>
             </div>
           </div>
@@ -581,11 +606,12 @@ Mensaje: ${formData.mensaje}
                       className="w-full px-4 py-3 border border-gray-200 rounded-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white"
                     >
                       <option value="">Selecciona un servicio</option>
-                      <option value="Masaje Relajante">Masaje Relajante</option>
-                      <option value="Drenaje Linfático">Drenaje Linfático</option>
+                      <option value="Masaje Relajante">Masaje Relajante - $990</option>
+                      <option value="Masaje Descontracturante">Masaje Descontracturante - $990</option>
+                      <option value="Drenaje Linfático">Drenaje Linfático - $990</option>
+                      <option value="Masaje Reductor">Masaje Reductor - $1,200</option>
                       <option value="Masaje Modelador">Masaje Modelador</option>
                       <option value="Piedras Calientes">Piedras Calientes</option>
-                      <option value="Masaje Descontracturante">Masaje Descontracturante</option>
                       <option value="Vendas Neuromusculares">Vendas Neuromusculares</option>
                     </select>
                   </div>
