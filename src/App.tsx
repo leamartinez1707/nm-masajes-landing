@@ -53,7 +53,7 @@ Mensaje: ${formData.mensaje}
                 <img
                   src="/nm_log.png"
                   alt="NM Masajes Logo"
-                  className="h-10 w-auto mr-3"
+                  className="h-10 w-auto mr-3 rounded-full"
                 />
               </a>
               <div>
@@ -717,7 +717,7 @@ Mensaje: ${formData.mensaje}
               <img
                 src="/nm_log.png"
                 alt="NM Masajes Logo"
-                className="h-10 w-auto mr-3"
+                className="h-10 w-auto mr-3 rounded-full"
               />
               <h3 className="text-2xl font-bold">NM Masajes</h3>
             </div>
